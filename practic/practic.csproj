@@ -8,4 +8,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\list.png" />
+    <None Remove="Images\Oval1.png" />
+    <None Remove="Images\register.png" />
+    <None Remove="Images\TV - 28.png" />
+    <None Remove="TV - 28.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\list.png" />
+    <Resource Include="Images\Oval1.png" />
+    <Resource Include="Images\register.png" />
+    <Resource Include="Images\TV - 28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="TV - 28.png" />
+  </ItemGroup>
+
 </Project>

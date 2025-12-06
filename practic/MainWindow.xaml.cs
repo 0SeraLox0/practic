@@ -20,5 +20,36 @@ namespace practic
         {
             InitializeComponent();
         }
+
+        private void TextBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Close();
+        }
+
+        private void TextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (loginInput.Text == "Логин")
+            {
+                loginInput.Text = string.Empty;
+            }
+            if (passwordInput.Text == "")
+            {
+                passwordInput.Text = "Пароль";
+            }
+        }
+
+        private void passwordInput_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (loginInput.Text == "")
+            {
+                loginInput.Text = "Логин";
+            }
+            if (passwordInput.Text == "Пароль")
+            {
+                passwordInput.Text = string.Empty;
+            }
+        }
     }
 }
